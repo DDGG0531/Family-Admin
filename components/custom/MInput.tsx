@@ -1,12 +1,7 @@
 import type { NextComponentType } from 'next'
 import { MailIcon, LockClosedIcon } from '@heroicons/react/solid'
 
-const DInput: NextComponentType = ({
-  type,
-  className,
-  placeholder,
-  ...others
-}) => {
+const MInput: React.FC<any> = ({ type, className, placeholder, ...others }) => {
   return (
     <div className={`${className} relative`}>
       <input
@@ -25,4 +20,4 @@ const DInput: NextComponentType = ({
   )
 }
 
-export default DInput
+export default MInput

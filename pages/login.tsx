@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { useEffect } from 'react'
-import DBtn from '@/components/custom/DBtn'
-import DInput from '@/components/custom/DInput'
+import MBtn from '@/components/custom/MBtn'
+import MInput from '@/components/custom/MInput'
 import { useForm, Controller } from 'react-hook-form'
 
 const Login: NextPage = () => {
@@ -10,6 +10,7 @@ const Login: NextPage = () => {
     import('@lottiefiles/lottie-player')
   })
 
+  // React hook form
   const { control, handleSubmit } = useForm({
     defaultValues: {
       email: 'abc123@ggmail.com',
@@ -53,7 +54,7 @@ const Login: NextPage = () => {
                 name="email"
                 control={control}
                 render={({ field }) => (
-                  <DInput {...field} type="email" placeholder="電子郵件" />
+                  <MInput {...field} type="email" placeholder="電子郵件" />
                 )}
               />
 
@@ -62,14 +63,14 @@ const Login: NextPage = () => {
                 name="password"
                 control={control}
                 render={({ field }) => (
-                  <DInput {...field} type="password" placeholder="密碼" />
+                  <MInput {...field} type="password" placeholder="密碼" />
                 )}
               />
 
               {/** submit  */}
-              <DBtn type="submit" className="mt-8">
+              <MBtn type="submit" className="mt-8">
                 送出
-              </DBtn>
+              </MBtn>
             </form>
           </div>
         </div>

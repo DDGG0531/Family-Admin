@@ -1,6 +1,9 @@
-import type { NextComponentType } from 'next'
+interface Props {
+  children: React.ReactNode
+  className?: string
+}
 
-const DBtn: NextComponentType = ({ children, className }) => {
+const MBtn: React.FC<Props> = ({ children, className }) => {
   return (
     <button
       className={`${className} inline-flex items-center justify-center rounded  bg-primary p-3 text-white`}
@@ -10,4 +13,4 @@ const DBtn: NextComponentType = ({ children, className }) => {
   )
 }
 
-export default DBtn
+export default MBtn
