@@ -18,8 +18,11 @@ const Login: NextPage = () => {
     }
   })
 
-  const onSubmit = data =>
+  const onSubmit = async data => {
     console.log('萬歲拿到資料啦，甚至連useState都不用寫，我去', data)
+    // await callApi('some-where',data);
+    // callReactAuth function to set login state to true
+  }
 
   return (
     /** Page Root */

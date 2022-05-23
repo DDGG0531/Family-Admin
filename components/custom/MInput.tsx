@@ -1,7 +1,18 @@
-import type { NextComponentType } from 'next'
 import { MailIcon, LockClosedIcon } from '@heroicons/react/solid'
+type Type = 'email' | 'password'
 
-const MInput: React.FC<any> = ({ type, className, placeholder, ...others }) => {
+interface Props {
+  type?: Type
+  className?: string
+  placeholder?: string
+}
+
+const MInput: React.FC<Props> = ({
+  type,
+  className,
+  placeholder,
+  ...others
+}) => {
   return (
     <div className={`${className} relative`}>
       <input
